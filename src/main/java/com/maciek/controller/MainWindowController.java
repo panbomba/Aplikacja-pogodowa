@@ -15,6 +15,7 @@ public class MainWindowController {
 
     @FXML
     void button1Action() {
+        System.out.println("wybrales miasto!");
 
     }
 }

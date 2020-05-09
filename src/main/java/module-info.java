@@ -7,4 +7,5 @@ module Aplikacja.Pogodowa1 {
     opens com.maciek;
     opens com.maciek.controller;
     opens com.maciek.view;
+    //opens com.maciek.model;
 }

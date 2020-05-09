@@ -1,0 +1,19 @@
+.anchor{
+    -fx-background-image: url('img/galaxy.jpg');
+}
+
+.label{
+    -fx-text-fill: white;
+}
+
+.todayPane{
+    -fx-background-color: lightgray;
+    -fx-opacity: 0.1;
+}
+
+.weekPane{
+    -fx-background-color: lightgray;
+    -fx-opacity: 0.1;
+}
+
+

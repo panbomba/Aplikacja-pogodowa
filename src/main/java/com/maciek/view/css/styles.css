@@ -23,8 +23,16 @@
     -fx-opacity: 0.5;
 }
 
+.textField:hover {
+    -fx-opacity: 0.7;
+}
+
 .okButton{
     -fx-font-size: 18;
+}
+
+.okButton:hover {
+    -fx-opacity: 0.8;
 }
 
 

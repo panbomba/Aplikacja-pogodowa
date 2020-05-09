@@ -4,6 +4,8 @@
 
 .label{
     -fx-text-fill: white;
+    -fx-font-size: 18;
+
 }
 
 .todayPane{
@@ -14,6 +16,15 @@
 .weekPane{
     -fx-background-color: lightgray;
     -fx-opacity: 0.1;
+}
+
+.textField{
+    -fx-font-size: 18;
+    -fx-opacity: 0.5;
+}
+
+.okButton{
+    -fx-font-size: 18;
 }
 
 

@@ -33,4 +33,7 @@ public class MainWindowController extends BaseController {
 
     @FXML
     private Pane todayCity2;
+
+    @FXML
+    private Label etykietaCopyrights;
 }

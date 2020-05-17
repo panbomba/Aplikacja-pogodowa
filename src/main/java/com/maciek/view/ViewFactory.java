@@ -4,12 +4,17 @@ import com.maciek.WeatherDataManager;
 import com.maciek.controller.BaseController;
 import com.maciek.controller.MainWindowController;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ViewFactory {
 
@@ -20,26 +25,31 @@ public class ViewFactory {
     }
 
     public void showMainWindow(){
-        System.out.println("pokazano okno glowne");
+        //System.out.println("pokazano okno glowne");
 
         BaseController controller = new MainWindowController(weatherDataManager, this, "MainWindow.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(controller.getFxmlName()));
         fxmlLoader.setController(controller);
-        Parent parent;
+
+        Parent root;
         try {
-            parent = fxmlLoader.load();
+            root = fxmlLoader.load();
         } catch (IOException e) {
             e.printStackTrace();
             return;
         }
 
-        Scene scene = new Scene(parent);
+
+        Scene scene = new Scene(root);
         Stage stage = new Stage();
 
         scene.getStylesheets().clear();
         scene.getStylesheets().add(getClass().getResource("css/styles.css").toExternalForm());
 
+
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
+
     }
 }

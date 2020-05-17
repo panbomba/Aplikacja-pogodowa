@@ -5,37 +5,407 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="853.0" prefWidth="1280.0" styleClass="anchor" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="847.0" prefWidth="1280.0" styleClass="anchor" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button layoutX="250.0" layoutY="46.0" mnemonicParsing="false" onAction="#button1Action" styleClass="okButton" text="OK" />
-      <Label fx:id="etykietaMiasta1" layoutX="25.0" layoutY="18.0" text="Wybierz miasto" />
-      <TextField fx:id="wyborMiasta1" layoutX="25.0" layoutY="46.0" styleClass="textField" />
+      <TextField fx:id="wyborMiasta1" layoutX="25.0" layoutY="46.0" promptText="Wybierz miasto" styleClass="textField" />
 
       <Button layoutX="877.5" layoutY="46.0" mnemonicParsing="false" onAction="#button2Action" styleClass="okButton" text="OK" />
-      <Label fx:id="etykietaMiasta2" layoutX="652.5" layoutY="18.0" text="Wybierz miasto" />
-      <TextField fx:id="wyborMiasta2" layoutX="652.5" layoutY="46.0" styleClass="textField" />
+      <TextField fx:id="wyborMiasta2" layoutX="652.5" layoutY="46.0" promptText="Miasto do porównania" styleClass="textField" />
 
-      <Pane id="todayCity1" fx:id="todayCity1" layoutX="25.0" layoutY="95.0" prefHeight="195.0" prefWidth="602.5" styleClass="todayPane">
+      <StackPane id="todayCity1" fx:id="todayCity1" layoutX="25.0" layoutY="95.0" prefHeight="195.0" prefWidth="602.5" styleClass="todayPane" visible="false">
          <children>
-            <ImageView fx:id="imageCity1today" fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
-         </children></Pane>
-      <Pane id="todayCity2" fx:id="todayCity2" layoutX="652.5" layoutY="95.0" prefHeight="195.0" prefWidth="602.5" styleClass="todayPane" />
+            <HBox prefHeight="195.0" prefWidth="602.5">
+               <children>
+                  <VBox prefHeight="195.0" prefWidth="120.5">
+                     <children>
+                        <Label fx:id="todayDateCity1" prefHeight="42.0" prefWidth="120.5" text="Nd, 17 Maj">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <ImageView fx:id="obraz" fitHeight="120.5" fitWidth="120.5" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="aktualizacjaCity1" prefHeight="32.5" prefWidth="120.5" text="aktualizacja 16:43" wrapText="true" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="195.0" prefWidth="210.5">
+                     <children>
+                        <Label fx:id="nameCity1" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="210.5" text="Nazwamiasta">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="tempTodayCity1" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.5" prefWidth="210.5" text="21 C">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font></Label>
+                        <Label fx:id="descriptionTodayCity1" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="32.5" prefWidth="210.5" text="pochmurno z przejasnieniami">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="195.0" prefWidth="271.5">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="39" prefWidth="271.5" text="odczuwalna: 19">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="43.0" prefHeight="39" prefWidth="271.5" text="minimalna: 13">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="76.0" prefHeight="39" prefWidth="271.5" text="maksymalna: 24">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="109.0" prefHeight="39" prefWidth="271.5" text="wilgotność: 50%">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="142.0" prefHeight="39" prefWidth="271.5" text="ciśnienie: 3 mm">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children></StackPane>
+      <StackPane id="todayCity2" fx:id="todayCity2" layoutX="652.5" layoutY="95.0" prefHeight="195.0" prefWidth="602.5" styleClass="todayPane" visible="false">
+         <children>
+            <HBox prefHeight="195.0" prefWidth="602.5">
+               <children>
+                  <VBox prefHeight="195.0" prefWidth="120.5">
+                     <children>
+                        <Label fx:id="todayDate" prefHeight="42.0" prefWidth="120.5" text="Nd, 17 Maj">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <ImageView fx:id="obraz2" fitHeight="120.5" fitWidth="120.5" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="warunkiToday" prefHeight="32.5" prefWidth="120.5" text="aktualizacja 16:43" wrapText="true" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="195.0" prefWidth="210.5">
+                     <children>
+                        <Label fx:id="nameCity2" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="210.5" text="Nazwamiasta">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="tempTodayCity2" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.5" prefWidth="210.5" text="21 C">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="32.5" prefWidth="210.5" text="pochmurno z przejasnieniami">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="195.0" prefWidth="271.5">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="39" prefWidth="271.5" text="odczuwalna: 19">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="43.0" prefHeight="39" prefWidth="271.5" text="minimalna: 13">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="76.0" prefHeight="39" prefWidth="271.5" text="maksymalna: 24">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="109.0" prefHeight="39" prefWidth="271.5" text="wilgotność: 50%">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="142.0" prefHeight="39" prefWidth="271.5" text="ciśnienie: 3 mm">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children></StackPane>
 
-      <Pane fx:id="day1City1Pane" layoutX="25.0" layoutY="300.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
-      <Pane fx:id="day2City1Pane" layoutX="25.0" layoutY="400.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
-      <Pane fx:id="day3City1Pane" layoutX="25.0" layoutY="500.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
-      <Pane fx:id="day4City1Pane" layoutX="25.0" layoutY="600.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
-      <Pane fx:id="day5City1Pane" layoutX="25.0" layoutY="700.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
+      <StackPane fx:id="day1City1Pane" layoutX="25.0" layoutY="300.0" prefHeight="67.0" prefWidth="603.0" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="pochmurno z przejasnieniami">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay1City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
+      <StackPane fx:id="day2City1Pane" layoutX="25.0" layoutY="400.0" prefHeight="90.0" prefWidth="602.5" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="bezchmurnie">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay2City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
+      <StackPane fx:id="day3City1Pane" layoutX="25.0" layoutY="500.0" prefHeight="90.0" prefWidth="602.5" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="bezchmurnie">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay3City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
+      <StackPane fx:id="day4City1Pane" layoutX="25.0" layoutY="600.0" prefHeight="90.0" prefWidth="602.5" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="bezchmurnie">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay4City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
+      <StackPane fx:id="day5City1Pane" layoutX="25.0" layoutY="700.0" prefHeight="90.0" prefWidth="602.5" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="bezchmurnie">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay5City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
 
-      <Pane fx:id="day1City2Pane" layoutX="652.5" layoutY="300.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
-      <Pane fx:id="day2City2Pane" layoutX="652.5" layoutY="400.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
-      <Pane fx:id="day3City2Pane" layoutX="652.5" layoutY="500.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
-      <Pane fx:id="day4City2Pane" layoutX="652.5" layoutY="600.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
-      <Pane fx:id="day5City2Pane" layoutX="652.5" layoutY="700.0" prefHeight="90.0" prefWidth="602.5" styleClass="weekPane" />
+      <StackPane fx:id="day1City2Pane" layoutX="652.5" layoutY="300.0" prefHeight="90.0" prefWidth="602.5" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="bezchmurnie">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay1City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
+      <StackPane fx:id="day2City2Pane" layoutX="652.5" layoutY="400.0" prefHeight="90.0" prefWidth="602.5" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="bezchmurnie">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay2City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
+      <StackPane fx:id="day3City2Pane" layoutX="652.5" layoutY="500.0" prefHeight="90.0" prefWidth="602.5" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="bezchmurnie">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay3City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
+      <StackPane fx:id="day4City2Pane" layoutX="652.5" layoutY="600.0" prefHeight="90.0" prefWidth="602.5" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="bezchmurnie">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay4City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
+      <StackPane fx:id="day5City2Pane" layoutX="652.5" layoutY="700.0" prefHeight="90.0" prefWidth="602.5" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="90.0" prefWidth="187.0">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="bezchmurnie">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="obrazDay5City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></StackPane>
 
-      <Label fx:id="etykietaCopyrights" layoutX="999.0" layoutY="831.0" text="Powered by openweathermap.org" />
+      <Label fx:id="etykietaCopyrights" layoutX="1080.0" layoutY="7.0" prefHeight="32.0" prefWidth="200.0" text="Powered by openweathermap.org" textFill="#f57322" />
       <Label fx:id="errorLabel1" layoutX="313.0" layoutY="50.0" prefHeight="17.0" prefWidth="222.0" text="" />
       <Label fx:id="errorLabel2" layoutX="940.5" layoutY="50.0" prefHeight="17.0" prefWidth="222.0" text="" />
 

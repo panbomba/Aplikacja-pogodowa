@@ -139,7 +139,7 @@ public class MainWindowController extends BaseController implements Initializabl
         todayCity1.setVisible(true);
         Image obrazStronka = new Image("http://openweathermap.org/img/wn/10d@2x.png");
         obraz.setImage(obrazStronka);
-        nameCity1.setText(miasto1.toUpperCase());
+        nameCity1.setText(miasto1.toUpperCase() + weatherDataManager.stopnie);
         day1City1Pane.setVisible(true);
         obrazDay1City1.setImage(obrazStronka);
         day2City1Pane.setVisible(true);

@@ -14,6 +14,7 @@ import java.util.Date;
 public class WeatherDataManager {
 
     private static String apiKey = "fb39b81cd3a7ca7c9c2938c1e8a19e6d"; //CZY TO MA BYC STALA ALBO PRIVATE?
+    public String stopnie = "\u00B0";
 
     public static String getJsonStringWeather(String miasto) throws IOException {
 

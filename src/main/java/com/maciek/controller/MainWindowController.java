@@ -1,20 +1,18 @@
 package com.maciek.controller;
 
-import com.maciek.WeatherDataManager;
+import com.maciek.model.WeatherDataManager;
 import com.maciek.view.ViewFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -132,8 +130,11 @@ public class MainWindowController extends BaseController implements Initializabl
     private ImageView obrazDay5City2;
 
     @FXML
-    void button1Action() throws FileNotFoundException {
+    void button1Action() throws IOException {
         String miasto1 = wyborMiasta1.getText();
+        weatherDataManager.getJsonStringWeather(miasto1); // NA KONIEC WSZYSTKO UMIESCIC W JEDNEJ FUNKCJI: GET WEATHER
+        weatherDataManager.getJsonStringForecast(miasto1);
+        weatherDataManager.getTimeStamp();
         //errorLabel1.setText("POGODA DLA " + miasto1.toUpperCase());
         todayCity1.setVisible(true);
         Image obrazStronka = new Image("http://openweathermap.org/img/wn/10d@2x.png");

@@ -1,6 +1,6 @@
 package com.maciek.controller;
 
-import com.maciek.WeatherDataManager;
+import com.maciek.model.WeatherDataManager;
 import com.maciek.view.ViewFactory;
 
 public abstract class BaseController {

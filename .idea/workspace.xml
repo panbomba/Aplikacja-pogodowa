@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa573891-03e9-4bc1-8932-01abed1dd5ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maciek/view/css/img/blue.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/Launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/WeatherDataManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/WeatherDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/MainWindowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/MainWindowController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/MainWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/view/MainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/view/ViewFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/view/ViewFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/view/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/view/ViewFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/view/css/img/ball.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/view/css/img/galaxy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/view/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/view/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +54,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Java FX lib/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -67,7 +73,7 @@
       <module name="Aplikacja Pogodowa 1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.maciek.*" />
+          <option name="PATTERN" value="com.maciek.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,30 +121,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588842920865" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1589743952737">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1589794702205">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589729111110" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589743952737" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589715226066" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1589743952737">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589794702205" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1589794702205">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589729111109" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589743952737" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589715226065" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1589743952736">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589794702205" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1589794702205">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589729111109" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589743952736" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589715226065" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1589743952737">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589794702205" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1589794702205">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589729111109" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589743952737" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589715226065" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589794702205" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1588843933235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

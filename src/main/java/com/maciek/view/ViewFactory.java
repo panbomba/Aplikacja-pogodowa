@@ -1,20 +1,14 @@
 package com.maciek.view;
 
-import com.maciek.WeatherDataManager;
+import com.maciek.model.WeatherDataManager;
 import com.maciek.controller.BaseController;
 import com.maciek.controller.MainWindowController;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class ViewFactory {
 

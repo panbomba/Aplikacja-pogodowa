@@ -50,23 +50,23 @@
                   </VBox>
                   <VBox prefHeight="195.0" prefWidth="271.5">
                      <children>
-                        <Label layoutX="10.0" layoutY="10.0" prefHeight="39" prefWidth="271.5" text="odczuwalna: 19">
+                        <Label fx:id="odczuwalnaToday1" layoutX="10.0" layoutY="10.0" prefHeight="39" prefWidth="271.5" text="odczuwalna: 19">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
-                        <Label layoutX="10.0" layoutY="43.0" prefHeight="39" prefWidth="271.5" text="minimalna: 13">
+                        <Label fx:id="minToday1" layoutX="10.0" layoutY="43.0" prefHeight="39" prefWidth="271.5" text="minimalna: 13">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
-                        <Label layoutX="10.0" layoutY="76.0" prefHeight="39" prefWidth="271.5" text="maksymalna: 24">
+                        <Label fx:id="maxToday1" layoutX="10.0" layoutY="76.0" prefHeight="39" prefWidth="271.5" text="maksymalna: 24">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
-                        <Label layoutX="10.0" layoutY="109.0" prefHeight="39" prefWidth="271.5" text="wilgotność: 50%">
+                        <Label fx:id="humidToday1" layoutX="10.0" layoutY="109.0" prefHeight="39" prefWidth="271.5" text="wilgotność: 50%">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
-                        <Label layoutX="10.0" layoutY="142.0" prefHeight="39" prefWidth="271.5" text="ciśnienie: 3 mm">
+                        <Label fx:id="pressureToday1" layoutX="10.0" layoutY="142.0" prefHeight="39" prefWidth="271.5" text="ciśnienie: 3 mm">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>

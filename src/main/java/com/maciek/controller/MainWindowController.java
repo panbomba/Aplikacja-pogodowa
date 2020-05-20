@@ -76,6 +76,27 @@ public class MainWindowController extends BaseController implements Initializabl
     private StackPane day2City2Pane;
 
     @FXML
+    private Label tempTodayCity1;
+
+    @FXML
+    private Label descriptionTodayCity1;
+
+    @FXML
+    private Label odczuwalnaToday1;
+
+    @FXML
+    private Label minToday1;
+
+    @FXML
+    private Label maxToday1;
+
+    @FXML
+    private Label humidToday1;
+
+    @FXML
+    private Label pressureToday1;
+
+    @FXML
     private StackPane day3City2Pane;
 
     @FXML
@@ -92,6 +113,9 @@ public class MainWindowController extends BaseController implements Initializabl
 
     @FXML
     private Label nameCity1;
+
+    @FXML
+    private Label aktualizacjaCity1;
 
     @FXML
     private Label nameCity2;
@@ -134,11 +158,14 @@ public class MainWindowController extends BaseController implements Initializabl
         String miasto1 = wyborMiasta1.getText();
         weatherDataManager.getJsonStringWeather(miasto1); // NA KONIEC WSZYSTKO UMIESCIC W JEDNEJ FUNKCJI: GET WEATHER
         weatherDataManager.getJsonStringForecast(miasto1);
-        weatherDataManager.getTimeStamp();
+        weatherDataManager.getWeatherToday(miasto1);
+        aktualizacjaCity1.setText(weatherDataManager.getTimeStamp());
+        tempTodayCity1.setText(String.valueOf(weatherDataManager.getWeatherToday(miasto1).get("temperature")));
         //errorLabel1.setText("POGODA DLA " + miasto1.toUpperCase());
         todayCity1.setVisible(true);
         Image obrazStronka = new Image("http://openweathermap.org/img/wn/10d@2x.png");
         obraz.setImage(obrazStronka);
+
         nameCity1.setText(miasto1.toUpperCase() + weatherDataManager.stopnie);
         day1City1Pane.setVisible(true);
         obrazDay1City1.setImage(obrazStronka);
@@ -150,6 +177,7 @@ public class MainWindowController extends BaseController implements Initializabl
         obrazDay4City1.setImage(obrazStronka);
         day5City1Pane.setVisible(true);
         obrazDay5City1.setImage(obrazStronka);
+
 
     }
 

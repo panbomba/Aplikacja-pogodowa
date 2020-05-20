@@ -85,7 +85,7 @@ public class WeatherDataManager {
             icon = jsonLineItem.getString("icon");
         }
 
-        weatherConditions.put("Icon", icon);
+        weatherConditions.put("icon", icon);
         weatherConditions.put("temperature", temperature);
         weatherConditions.put("description", description);
         weatherConditions.put("feelslike", feelslike);
@@ -103,6 +103,8 @@ public class WeatherDataManager {
         HashMap<String, String> weatherToday = getWeatherToday(miasto);
 
         Image obrazStronka = new Image("http://openweathermap.org/img/wn/10d@2x.png");
+
+        
 
     }
 }

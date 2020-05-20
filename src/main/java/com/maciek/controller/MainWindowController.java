@@ -82,7 +82,7 @@ public class MainWindowController extends BaseController implements Initializabl
     private Label descriptionTodayCity1;
 
     @FXML
-    private Label odczuwalnaToday1;
+    protected Label odczuwalnaToday1;
 
     @FXML
     private Label minToday1;
@@ -155,18 +155,34 @@ public class MainWindowController extends BaseController implements Initializabl
 
     @FXML
     void button1Action() throws IOException {
-        String miasto1 = wyborMiasta1.getText();
+        String wpisanyTekst1 = wyborMiasta1.getText();
+        String miasto1 = wpisanyTekst1.replace(" " , "+");
         weatherDataManager.getJsonStringWeather(miasto1); // NA KONIEC WSZYSTKO UMIESCIC W JEDNEJ FUNKCJI: GET WEATHER
         weatherDataManager.getJsonStringForecast(miasto1);
         weatherDataManager.getWeatherToday(miasto1);
-        aktualizacjaCity1.setText(weatherDataManager.getTimeStamp());
-        tempTodayCity1.setText(String.valueOf(weatherDataManager.getWeatherToday(miasto1).get("temperature")));
-        //errorLabel1.setText("POGODA DLA " + miasto1.toUpperCase());
-        todayCity1.setVisible(true);
-        Image obrazStronka = new Image("http://openweathermap.org/img/wn/10d@2x.png");
-        obraz.setImage(obrazStronka);
+        aktualizacjaCity1.setText("aktualizacja: " + weatherDataManager.getTimeStamp());
+        tempTodayCity1.setText(String.valueOf(weatherDataManager.getWeatherToday(miasto1).get("temperature")) + weatherDataManager.stopnie + " C");
+        odczuwalnaToday1.setText("odczuwalna: " + (String) weatherDataManager.getWeatherToday(miasto1).get("feelslike") + weatherDataManager.stopnie + " C");
+        minToday1.setText("minimalna: " + (String) weatherDataManager.getWeatherToday(miasto1).get("min") + weatherDataManager.stopnie + " C");
+        maxToday1.setText("maksymalna: " + (String) weatherDataManager.getWeatherToday(miasto1).get("max") + weatherDataManager.stopnie + " C");
+        humidToday1.setText("wilgotność: " + (String) weatherDataManager.getWeatherToday(miasto1).get("humidity") +
+                " %");
+        pressureToday1.setText("ciśnienie: " + (String) weatherDataManager.getWeatherToday(miasto1).get("pressure") +
+            " hPa");
+        descriptionTodayCity1.setText((String) weatherDataManager.getWeatherToday(miasto1).get("description"));
+        String icon = ((String) weatherDataManager.getWeatherToday(miasto1).get("icon"));
 
-        nameCity1.setText(miasto1.toUpperCase() + weatherDataManager.stopnie);
+
+        todayCity1.setVisible(true);
+        String iconLink = ("http://openweathermap.org/img/wn/" + icon + "@2x.png");
+        Image obrazStronka = new Image(iconLink);
+        obraz.setImage(obrazStronka);
+        System.out.println(icon);
+        System.out.println(iconLink);
+
+        nameCity1.setText(wpisanyTekst1.toUpperCase());
+
+
         day1City1Pane.setVisible(true);
         obrazDay1City1.setImage(obrazStronka);
         day2City1Pane.setVisible(true);

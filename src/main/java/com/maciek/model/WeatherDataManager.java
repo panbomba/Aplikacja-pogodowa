@@ -1,27 +1,19 @@
 package com.maciek.model;
 
-import com.maciek.controller.MainWindowController;
-import javafx.scene.image.Image;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 
 public class WeatherDataManager {
 
     private static String apiKey = "fb39b81cd3a7ca7c9c2938c1e8a19e6d"; //CZY TO MA BYC STALA ALBO PRIVATE?
-    public String stopnie = "\u00B0";
     private Object HashMap;
 
     public static String getJsonStringWeather(String miasto) throws IOException {
@@ -98,13 +90,14 @@ public class WeatherDataManager {
         return weatherConditions;
     }
 
-    public void setWeatherToday(String miasto) throws IOException {
-        String timestamp = getTimeStamp();
-        HashMap<String, String> weatherToday = getWeatherToday(miasto);
+    public void getForecast(String miasto) throws IOException {
+        HashMap<String, String> weatherForecast = new HashMap<>();
 
-        Image obrazStronka = new Image("http://openweathermap.org/img/wn/10d@2x.png");
+        String jsonString = getJsonStringForecast(miasto);
 
-        
+        return;
+
+
 
     }
 }

@@ -10,10 +10,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class MainWindowController extends BaseController implements Initializable {
@@ -21,168 +20,229 @@ public class MainWindowController extends BaseController implements Initializabl
         super(weatherDataManager, viewFactory, fxmlName);
     }
 
+    public void setLabelText(String data, Label label) {
+        label.setText(data);
+    }
+
+    public String stopnie = "\u00B0";
+
     @FXML
     private AnchorPane anchor;
-
-    @FXML
-    private Label etykietaMiasta1;
-
     @FXML
     private TextField wyborMiasta1;
-
-    @FXML
-    private Label etykietaMiasta2;
-
     @FXML
     private TextField wyborMiasta2;
 
     @FXML
     private StackPane todayCity1;
-
     @FXML
-    private Label todayDate;
-
+    private Label todayDateCity1;
     @FXML
     private ImageView obraz;
-
     @FXML
-    private ImageView obraz2;
-
+    private Label aktualizacjaCity1;
     @FXML
-    private Label warunkiToday;
-
-    @FXML
-    private StackPane todayCity2;
-
-    @FXML
-    private StackPane day1City1Pane;
-
-    @FXML
-    private StackPane day2City1Pane;
-
-    @FXML
-    private StackPane day3City1Pane;
-
-    @FXML
-    private StackPane day4City1Pane;
-
-    @FXML
-    private StackPane day5City1Pane;
-
-    @FXML
-    private StackPane day1City2Pane;
-
-    @FXML
-    private StackPane day2City2Pane;
-
+    private Label nameCity1;
     @FXML
     private Label tempTodayCity1;
-
     @FXML
     private Label descriptionTodayCity1;
-
     @FXML
-    protected Label odczuwalnaToday1;
-
+    private Label odczuwalnaToday1;
     @FXML
     private Label minToday1;
-
     @FXML
     private Label maxToday1;
-
     @FXML
     private Label humidToday1;
-
     @FXML
     private Label pressureToday1;
 
     @FXML
+    private StackPane todayCity2;
+    @FXML
+    private Label todayDateCity2;
+    @FXML
+    private ImageView obraz2;
+    @FXML
+    private Label aktualizacjaCity2;
+    @FXML
+    private Label nameCity2;
+    @FXML
+    private Label tempTodayCity2;
+    @FXML
+    private Label descriptionTodayCity2;
+    @FXML
+    private Label odczuwalnaToday2;
+    @FXML
+    private Label minToday2;
+    @FXML
+    private Label maxToday2;
+    @FXML
+    private Label humidToday2;
+    @FXML
+    private Label pressureToday2;
+
+    @FXML
+    private StackPane day1City1Pane;
+    @FXML
+    private Label dateDay1City1;
+    @FXML
+    private Label descriptionDay1City1;
+    @FXML
+    private ImageView obrazDay1City1;
+    @FXML
+    private Label tempDay1City1;
+
+    @FXML
+    private StackPane day2City1Pane;
+    @FXML
+    private Label dateDay2City1;
+    @FXML
+    private Label descriptionDay2City1;
+    @FXML
+    private ImageView obrazDay2City1;
+    @FXML
+    private Label tempDay2City1;
+
+    @FXML
+    private StackPane day3City1Pane;
+    @FXML
+    private Label dateDay3City1;
+    @FXML
+    private Label descriptionDay3City1;
+    @FXML
+    private ImageView obrazDay3City1;
+    @FXML
+    private Label tempDay3City1;
+
+    @FXML
+    private StackPane day4City1Pane;
+    @FXML
+    private Label dateDay4City1;
+    @FXML
+    private Label descriptionDay4City1;
+    @FXML
+    private ImageView obrazDay4City1;
+    @FXML
+    private Label tempDay4City1;
+
+    @FXML
+    private StackPane day5City1Pane;
+    @FXML
+    private Label dateDay5City1;
+    @FXML
+    private Label descriptionDay5City1;
+    @FXML
+    private ImageView obrazDay5City1;
+    @FXML
+    private Label tempDay5City1;
+
+    @FXML
+    private StackPane day1City2Pane;
+    @FXML
+    private Label dateDay1City2;
+    @FXML
+    private Label descriptionDay1City2;
+    @FXML
+    private ImageView obrazDay1City2;
+    @FXML
+    private Label tempDay1City2;
+
+    @FXML
+    private StackPane day2City2Pane;
+    @FXML
+    private Label dateDay2City2;
+    @FXML
+    private Label descriptionDay2City2;
+    @FXML
+    private ImageView obrazDay2City2;
+    @FXML
+    private Label tempDay2City2;
+
+    @FXML
     private StackPane day3City2Pane;
+    @FXML
+    private Label dateDay3City2;
+    @FXML
+    private Label descriptionDay3City2;
+    @FXML
+    private ImageView obrazDay3City2;
+    @FXML
+    private Label tempDay3City2;
 
     @FXML
     private StackPane day4City2Pane;
+    @FXML
+    private Label dateDay4City2;
+    @FXML
+    private Label descriptionDay4City2;
+    @FXML
+    private ImageView obrazDay4City2;
+    @FXML
+    private Label tempDay4City2;
 
     @FXML
     private StackPane day5City2Pane;
+    @FXML
+    private Label dateDay5City2;
+    @FXML
+    private Label descriptionDay5City2;
+    @FXML
+    private ImageView obrazDay5City2;
+    @FXML
+    private Label tempDay5City2;
 
     @FXML
     private Label etykietaCopyrights;
-
     @FXML
     private Label errorLabel1;
-
-    @FXML
-    private Label nameCity1;
-
-    @FXML
-    private Label aktualizacjaCity1;
-
-    @FXML
-    private Label nameCity2;
-
     @FXML
     private Label errorLabel2;
 
     @FXML
-    private ImageView obrazDay1City1;
-
-    @FXML
-    private ImageView obrazDay2City1;
-
-    @FXML
-    private ImageView obrazDay3City1;
-
-    @FXML
-    private ImageView obrazDay4City1;
-
-    @FXML
-    private ImageView obrazDay5City1;
-
-    @FXML
-    private ImageView obrazDay1City2;
-
-    @FXML
-    private ImageView obrazDay2City2;
-
-    @FXML
-    private ImageView obrazDay3City2;
-
-    @FXML
-    private ImageView obrazDay4City2;
-
-    @FXML
-    private ImageView obrazDay5City2;
-
-    @FXML
     void button1Action() throws IOException {
         String wpisanyTekst1 = wyborMiasta1.getText();
+        setSceneDataCity1(wpisanyTekst1);
+        weatherDataManager.getForecast(wpisanyTekst1);
+
+    }
+
+    @FXML
+    void button2Action() throws IOException {
+        String wpisanyTekst2 = wyborMiasta2.getText();
+        setSceneDataCity2(wpisanyTekst2);
+    }
+
+    // INITIALIZE??? - PO CO?
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        StackPane todayCity1 = new StackPane();
+        Label labelInsideCity1 = new Label();
+        todayCity1.getChildren().add(labelInsideCity1);
+    }
+
+    public void setSceneDataCity1(String wpisanyTekst1) throws IOException {
         String miasto1 = wpisanyTekst1.replace(" " , "+");
-        weatherDataManager.getJsonStringWeather(miasto1); // NA KONIEC WSZYSTKO UMIESCIC W JEDNEJ FUNKCJI: GET WEATHER
-        weatherDataManager.getJsonStringForecast(miasto1);
-        weatherDataManager.getWeatherToday(miasto1);
+        HashMap weatherNow = weatherDataManager.getWeatherToday(miasto1);
         aktualizacjaCity1.setText("aktualizacja: " + weatherDataManager.getTimeStamp());
-        tempTodayCity1.setText(String.valueOf(weatherDataManager.getWeatherToday(miasto1).get("temperature")) + weatherDataManager.stopnie + " C");
-        odczuwalnaToday1.setText("odczuwalna: " + (String) weatherDataManager.getWeatherToday(miasto1).get("feelslike") + weatherDataManager.stopnie + " C");
-        minToday1.setText("minimalna: " + (String) weatherDataManager.getWeatherToday(miasto1).get("min") + weatherDataManager.stopnie + " C");
-        maxToday1.setText("maksymalna: " + (String) weatherDataManager.getWeatherToday(miasto1).get("max") + weatherDataManager.stopnie + " C");
-        humidToday1.setText("wilgotność: " + (String) weatherDataManager.getWeatherToday(miasto1).get("humidity") +
+        tempTodayCity1.setText(String.valueOf(weatherNow.get("temperature")) + stopnie + " C");
+        odczuwalnaToday1.setText("odczuwalna: " + (String) weatherNow.get("feelslike") + stopnie + " C");
+        minToday1.setText("minimalna: " + (String) weatherNow.get("min") + stopnie + " C");
+        maxToday1.setText("maksymalna: " + (String) weatherNow.get("max") + stopnie + " C");
+        humidToday1.setText("wilgotność: " + (String) weatherNow.get("humidity") +
                 " %");
-        pressureToday1.setText("ciśnienie: " + (String) weatherDataManager.getWeatherToday(miasto1).get("pressure") +
-            " hPa");
-        descriptionTodayCity1.setText((String) weatherDataManager.getWeatherToday(miasto1).get("description"));
-        String icon = ((String) weatherDataManager.getWeatherToday(miasto1).get("icon"));
+        pressureToday1.setText("ciśnienie: " + (String) weatherNow.get("pressure") +
+                " hPa");
+        descriptionTodayCity1.setText((String) weatherNow.get("description"));
 
-
-        todayCity1.setVisible(true);
+        String icon = ((String) weatherNow.get("icon"));
         String iconLink = ("http://openweathermap.org/img/wn/" + icon + "@2x.png");
         Image obrazStronka = new Image(iconLink);
         obraz.setImage(obrazStronka);
-        System.out.println(icon);
-        System.out.println(iconLink);
-
         nameCity1.setText(wpisanyTekst1.toUpperCase());
 
-
+        todayCity1.setVisible(true);
         day1City1Pane.setVisible(true);
         obrazDay1City1.setImage(obrazStronka);
         day2City1Pane.setVisible(true);
@@ -194,34 +254,40 @@ public class MainWindowController extends BaseController implements Initializabl
         day5City1Pane.setVisible(true);
         obrazDay5City1.setImage(obrazStronka);
 
-
     }
 
-    @FXML
-    void button2Action() {
-        String miasto2 = wyborMiasta2.getText();
-        //errorLabel2.setText("wybrales drugie miasto");
-        Image obrazStronka2 = new Image("http://openweathermap.org/img/wn/10d@2x.png");
-        obraz2.setImage(obrazStronka2);
-        nameCity2.setText(miasto2.toUpperCase());
+    public void setSceneDataCity2(String wpisanyTekst2) throws IOException {
+        String miasto2 = wpisanyTekst2.replace(" " , "+");
+        HashMap weatherNow = weatherDataManager.getWeatherToday(miasto2);
+        aktualizacjaCity2.setText("aktualizacja: " + weatherDataManager.getTimeStamp());
+        tempTodayCity2.setText(String.valueOf(weatherNow.get("temperature")) + stopnie + " C");
+        odczuwalnaToday2.setText("odczuwalna: " + (String) weatherNow.get("feelslike") + stopnie + " C");
+        minToday2.setText("minimalna: " + (String) weatherNow.get("min") + stopnie + " C");
+        maxToday2.setText("maksymalna: " + (String) weatherNow.get("max") + stopnie + " C");
+        humidToday2.setText("wilgotność: " + (String) weatherNow.get("humidity") +
+                " %");
+        pressureToday2.setText("ciśnienie: " + (String) weatherNow.get("pressure") +
+                " hPa");
+        descriptionTodayCity2.setText((String) weatherNow.get("description"));
+
+        String icon = ((String) weatherNow.get("icon"));
+        String iconLink = ("http://openweathermap.org/img/wn/" + icon + "@2x.png");
+        Image obrazStronka = new Image(iconLink);
+        obraz2.setImage(obrazStronka);
+        nameCity2.setText(wpisanyTekst2.toUpperCase());
+
         todayCity2.setVisible(true);
         day1City2Pane.setVisible(true);
-        obrazDay1City2.setImage(obrazStronka2);
+        obrazDay1City2.setImage(obrazStronka);
         day2City2Pane.setVisible(true);
-        obrazDay2City2.setImage(obrazStronka2);
+        obrazDay2City2.setImage(obrazStronka);
         day3City2Pane.setVisible(true);
-        obrazDay3City2.setImage(obrazStronka2);
+        obrazDay3City2.setImage(obrazStronka);
         day4City2Pane.setVisible(true);
-        obrazDay4City2.setImage(obrazStronka2);
+        obrazDay4City2.setImage(obrazStronka);
         day5City2Pane.setVisible(true);
-        obrazDay5City2.setImage(obrazStronka2);
+        obrazDay5City2.setImage(obrazStronka);
+
     }
 
-    // INITIALIZE??? - PO CO?
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        StackPane todayCity1 = new StackPane();
-        Label labelInsideCity1 = new Label();
-        todayCity1.getChildren().add(labelInsideCity1);
-    }
 }

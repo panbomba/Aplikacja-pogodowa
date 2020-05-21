@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class ViewFactory {
@@ -19,7 +18,6 @@ public class ViewFactory {
     }
 
     public void showMainWindow(){
-        //System.out.println("pokazano okno glowne");
 
         BaseController controller = new MainWindowController(weatherDataManager, this, "MainWindow.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(controller.getFxmlName()));
@@ -33,17 +31,14 @@ public class ViewFactory {
             return;
         }
 
-
         Scene scene = new Scene(root);
         Stage stage = new Stage();
 
         scene.getStylesheets().clear();
         scene.getStylesheets().add(getClass().getResource("css/styles.css").toExternalForm());
 
-
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-
     }
 }

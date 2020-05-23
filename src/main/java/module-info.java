@@ -4,6 +4,7 @@ module Aplikacja.Pogodowa1 {
     requires javafx.web;
     requires javafx.graphics;
     requires org.json;
+    requires com.google.gson;
 
     opens com.maciek;
     opens com.maciek.controller;

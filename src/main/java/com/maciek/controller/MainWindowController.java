@@ -204,14 +204,15 @@ public class MainWindowController extends BaseController implements Initializabl
     void button1Action() throws IOException {
         String wpisanyTekst1 = wyborMiasta1.getText();
         setSceneDataCity1(wpisanyTekst1);
-        weatherDataManager.getForecast(wpisanyTekst1);
-
+        weatherDataManager.getUnixTimeForTomorrow();
+        weatherDataManager.getForecastMap(wpisanyTekst1);
     }
 
     @FXML
     void button2Action() throws IOException {
         String wpisanyTekst2 = wyborMiasta2.getText();
         setSceneDataCity2(wpisanyTekst2);
+        //weatherDataManager.Forecats(wpisanyTekst2);
     }
 
     // INITIALIZE??? - PO CO?
@@ -224,6 +225,7 @@ public class MainWindowController extends BaseController implements Initializabl
 
     public void setSceneDataCity1(String wpisanyTekst1) throws IOException {
         String miasto1 = wpisanyTekst1.replace(" " , "+");
+        //String forecast = weatherDataManager.getJsonStringForecast(miasto1);
         HashMap weatherNow = weatherDataManager.getWeatherToday(miasto1);
         aktualizacjaCity1.setText("aktualizacja: " + weatherDataManager.getTimeStamp());
         tempTodayCity1.setText(String.valueOf(weatherNow.get("temperature")) + stopnie + " C");

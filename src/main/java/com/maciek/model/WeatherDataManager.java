@@ -2,12 +2,9 @@ package com.maciek.model;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONString;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.SimpleDateFormat;
@@ -56,7 +53,6 @@ public class WeatherDataManager {
 
     public String getTimeStamp(){
         String timeStamp = new SimpleDateFormat("HH:mm").format(new java.util.Date());
-        System.out.println(timeStamp);
         return timeStamp;
     }
 
@@ -91,7 +87,6 @@ public class WeatherDataManager {
         weatherConditions.put("humidity", humidity);
         weatherConditions.put("pressure", pressure);
 
-        System.out.println(weatherConditions);
         return weatherConditions;
     }
 
@@ -103,12 +98,11 @@ public class WeatherDataManager {
         c.set(Calendar.MILLISECOND, 0);
         long unixTimeStamp = c.getTimeInMillis() / 1000;
         unixTimeStamp += 129600;
-        System.out.println(unixTimeStamp);
         return unixTimeStamp;
     }
 
     public HashMap getForecastMap (String miasto) throws IOException {
-        HashMap<String, ArrayList<String>> weatherForecastMap = new HashMap();
+        HashMap<String, String> weatherForecastMap = new HashMap();
         long uniXTimeAtNoon = (Long) getUnixTimeForTomorrow();
         long unixTimeAtNoonDay2 = uniXTimeAtNoon + 86400;
         long unixTimeAtNoonDay3 = unixTimeAtNoonDay2 + 86400;
@@ -129,7 +123,6 @@ public class WeatherDataManager {
         String jsonString = getJsonStringForecast(miasto);
         JSONObject obiekt = new JSONObject(jsonString);
         JSONArray lineItems = obiekt.getJSONArray("list");
-        System.out.println(lineItems);
 
         int timeDay1Index = jsonString.indexOf(timeDay1);
         int timeDay1EndIndex = jsonString.indexOf(timeDay1End);
@@ -142,62 +135,82 @@ public class WeatherDataManager {
         int timeDay5Index = jsonString.indexOf(timeDay5);
         int timeDay5EndIndex = jsonString.indexOf(timeDay5End);
 
-        System.out.println(timeDay1Index);
-        System.out.println(timeDay1EndIndex);
-        System.out.println(timeDay2Index);
-        System.out.println(timeDay2EndIndex);
-        System.out.println(timeDay3Index);
-        System.out.println(timeDay3EndIndex);
-        System.out.println(timeDay4Index);
-        System.out.println(timeDay4EndIndex);
-        System.out.println(timeDay5Index);
-        System.out.println(timeDay5EndIndex);
-
         String day1Forecast = (String) jsonString.subSequence(timeDay1Index, timeDay1EndIndex);
         String day2Forecast = (String) jsonString.subSequence(timeDay2Index, timeDay2EndIndex);
         String day3Forecast = (String) jsonString.subSequence(timeDay3Index, timeDay3EndIndex);
         String day4Forecast = (String) jsonString.subSequence(timeDay4Index, timeDay4EndIndex);
         String day5Forecast = (String) jsonString.subSequence(timeDay5Index, timeDay5EndIndex);
 
-        getTempDescriptionAndIcon(day3Forecast);
-        getTempDescriptionAndIcon(day2Forecast);
-        getTempDescriptionAndIcon(day1Forecast);
-        getTempDescriptionAndIcon(day4Forecast);
-        getTempDescriptionAndIcon(day5Forecast);
+        weatherForecastMap.put("day1temp", getTemp(day1Forecast));
+        weatherForecastMap.put("day1desc", getDescription(day1Forecast));
+        weatherForecastMap.put("day1icon", getIcon(day1Forecast));
 
-        weatherForecastMap.put(timeDay1, getTempDescriptionAndIcon(day1Forecast));
-        weatherForecastMap.put(timeDay2, getTempDescriptionAndIcon(day2Forecast));
-        weatherForecastMap.put(timeDay3, getTempDescriptionAndIcon(day3Forecast));
-        weatherForecastMap.put(timeDay4, getTempDescriptionAndIcon(day4Forecast));
-        weatherForecastMap.put(timeDay5, getTempDescriptionAndIcon(day5Forecast));
+        weatherForecastMap.put("day2temp", getTemp(day2Forecast));
+        weatherForecastMap.put("day2desc", getDescription(day2Forecast));
+        weatherForecastMap.put("day2icon", getIcon(day2Forecast));
+
+        weatherForecastMap.put("day3temp", getTemp(day3Forecast));
+        weatherForecastMap.put("day3desc", getDescription(day3Forecast));
+        weatherForecastMap.put("day3icon", getIcon(day3Forecast));
+
+        weatherForecastMap.put("day4temp", getTemp(day4Forecast));
+        weatherForecastMap.put("day4desc", getDescription(day4Forecast));
+        weatherForecastMap.put("day4icon", getIcon(day4Forecast));
+
+        weatherForecastMap.put("day5temp", getTemp(day5Forecast));
+        weatherForecastMap.put("day5desc", getDescription(day5Forecast));
+        weatherForecastMap.put("day5icon", getIcon(day5Forecast));
+
 
         System.out.println(weatherForecastMap);
-        //System.out.println(tablicaDanych);
+        System.out.println(weatherForecastMap.get("day3desc"));
         return  weatherForecastMap;
     }
 
-    public ArrayList<String> getTempDescriptionAndIcon(String weatherDescription) {
-
-        ArrayList<String> tablicaWarunkow = new ArrayList<String>();
+    public String getTemp(String weatherDescription) {
 
         int tempIndex = weatherDescription.indexOf("temp");
+        String temp = weatherDescription.substring(tempIndex+6, tempIndex+8).replace(".", "");
+
+        return temp;
+    }
+
+    public String getDescription(String weatherDescription) {
+
         int iconIndex = weatherDescription.indexOf("icon");
         int descriptionIndex = weatherDescription.indexOf("description");
+        String description = weatherDescription.substring(descriptionIndex + 14, iconIndex - 3);
 
-        String temp = weatherDescription.substring(tempIndex+6, tempIndex+8);
-        System.out.println(temp);
-        tablicaWarunkow.add(temp);
+        return description;
+    }
 
-        String description = weatherDescription.substring(descriptionIndex+14, iconIndex-3);
-        System.out.println(description);
-        tablicaWarunkow.add(description);
+    public String getIcon(String weatherDescription) {
 
-        String icon = weatherDescription.substring(iconIndex+7, iconIndex+10);
-        System.out.println(icon);
-        tablicaWarunkow.add(icon);
+        int iconIndex = weatherDescription.indexOf("icon");
+        String icon = weatherDescription.substring(iconIndex + 7, iconIndex + 10);
 
+        return icon;
+    }
 
-        return tablicaWarunkow;
+    public String translateWeekday(String weekday) {
+        switch (weekday) {
+            case "SUNDAY":
+                return "Niedziela";
+            case "MONDAY":
+                return "Poniedziałek";
+            case "TUESDAY":
+                return "Wtorek";
+            case "WEDNESDAY":
+                return "Środa";
+            case "THURSDAY":
+                return "Czwartek";
+            case "FRIDAY":
+                return "Piątek";
+            case "SATURDAY":
+                return "Sobota";
+
+        }
+        return weekday;
     }
 
 }

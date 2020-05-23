@@ -10,8 +10,13 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -206,6 +211,7 @@ public class MainWindowController extends BaseController implements Initializabl
         setSceneDataCity1(wpisanyTekst1);
         weatherDataManager.getUnixTimeForTomorrow();
         weatherDataManager.getForecastMap(wpisanyTekst1);
+        getWeekday();
     }
 
     @FXML
@@ -243,18 +249,64 @@ public class MainWindowController extends BaseController implements Initializabl
         Image obrazStronka = new Image(iconLink);
         obraz.setImage(obrazStronka);
         nameCity1.setText(wpisanyTekst1.toUpperCase());
+        todayDateCity1.setText(getWeekday());
 
         todayCity1.setVisible(true);
         day1City1Pane.setVisible(true);
-        obrazDay1City1.setImage(obrazStronka);
         day2City1Pane.setVisible(true);
-        obrazDay2City1.setImage(obrazStronka);
         day3City1Pane.setVisible(true);
-        obrazDay3City1.setImage(obrazStronka);
         day4City1Pane.setVisible(true);
-        obrazDay4City1.setImage(obrazStronka);
         day5City1Pane.setVisible(true);
-        obrazDay5City1.setImage(obrazStronka);
+
+        LocalDate localDate = LocalDate.now();
+        String data1 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(1).toString());
+        String data2 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(2).toString());
+        String data3 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(3).toString());
+        String data4 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(4).toString());
+        String data5 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(5).toString());
+
+        dateDay1City1.setText(data1);
+        dateDay2City1.setText(data2);
+        dateDay3City1.setText(data3);
+        dateDay4City1.setText(data4);
+        dateDay5City1.setText(data5);
+
+        HashMap forecast = weatherDataManager.getForecastMap(miasto1);
+
+        String iconDay1 = (String) forecast.get("day1icon");
+        String iconLinkDay1 = ("http://openweathermap.org/img/wn/" + iconDay1 + "@2x.png");
+        Image imageD1C1 = new Image(iconLinkDay1);
+        obrazDay1City1.setImage(imageD1C1);
+        tempDay1City1.setText(forecast.get("day1temp") + stopnie + " C");
+        descriptionDay1City1.setText((String) forecast.get("day1desc"));
+
+        String iconDay2 = (String) forecast.get("day2icon");
+        String iconLinkDay2 = ("http://openweathermap.org/img/wn/" + iconDay2 + "@2x.png");
+        Image imageD2C1 = new Image(iconLinkDay2);
+        obrazDay2City1.setImage(imageD2C1);
+        tempDay2City1.setText(forecast.get("day2temp") + stopnie + " C");
+        descriptionDay2City1.setText((String) forecast.get("day2desc"));
+
+        String iconDay3 = (String) forecast.get("day3icon");
+        String iconLinkDay3 = ("http://openweathermap.org/img/wn/" + iconDay3 + "@2x.png");
+        Image imageD3C1 = new Image(iconLinkDay3);
+        obrazDay3City1.setImage(imageD3C1);
+        tempDay3City1.setText(forecast.get("day3temp") + stopnie + " C");
+        descriptionDay3City1.setText((String) forecast.get("day3desc"));
+
+        String iconDay4 = (String) forecast.get("day4icon");
+        String iconLinkDay4 = ("http://openweathermap.org/img/wn/" + iconDay4 + "@2x.png");
+        Image imageD4C1 = new Image(iconLinkDay4);
+        obrazDay4City1.setImage(imageD4C1);
+        tempDay4City1.setText(forecast.get("day4temp") + stopnie + " C");
+        descriptionDay4City1.setText((String) forecast.get("day4desc"));
+
+        String iconDay5 = (String) forecast.get("day5icon");
+        String iconLinkDay5 = ("http://openweathermap.org/img/wn/" + iconDay5 + "@2x.png");
+        Image imageD5C1 = new Image(iconLinkDay5);
+        obrazDay5City1.setImage(imageD5C1);
+        tempDay5City1.setText(forecast.get("day5temp") + stopnie + " C");
+        descriptionDay5City1.setText((String) forecast.get("day5desc"));
 
     }
 
@@ -277,19 +329,72 @@ public class MainWindowController extends BaseController implements Initializabl
         Image obrazStronka = new Image(iconLink);
         obraz2.setImage(obrazStronka);
         nameCity2.setText(wpisanyTekst2.toUpperCase());
+        todayDateCity2.setText(getWeekday());
 
         todayCity2.setVisible(true);
         day1City2Pane.setVisible(true);
-        obrazDay1City2.setImage(obrazStronka);
         day2City2Pane.setVisible(true);
-        obrazDay2City2.setImage(obrazStronka);
         day3City2Pane.setVisible(true);
-        obrazDay3City2.setImage(obrazStronka);
         day4City2Pane.setVisible(true);
-        obrazDay4City2.setImage(obrazStronka);
         day5City2Pane.setVisible(true);
-        obrazDay5City2.setImage(obrazStronka);
 
+        LocalDate localDate = LocalDate.now();
+        String data1 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(1).toString());
+        String data2 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(2).toString());
+        String data3 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(3).toString());
+        String data4 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(4).toString());
+        String data5 = weatherDataManager.translateWeekday(localDate.getDayOfWeek().plus(5).toString());
+
+        dateDay1City2.setText(data1);
+        dateDay2City2.setText(data2);
+        dateDay3City2.setText(data3);
+        dateDay4City2.setText(data4);
+        dateDay5City2.setText(data5);
+
+
+        HashMap forecast = weatherDataManager.getForecastMap(miasto2);
+
+        String iconDay1 = (String) forecast.get("day1icon");
+        String iconLinkDay1 = ("http://openweathermap.org/img/wn/" + iconDay1 + "@2x.png");
+        Image imageD1C1 = new Image(iconLinkDay1);
+        obrazDay1City2.setImage(imageD1C1);
+        tempDay1City2.setText(forecast.get("day1temp") + stopnie + " C");
+        descriptionDay1City2.setText((String) forecast.get("day1desc"));
+
+        String iconDay2 = (String) forecast.get("day2icon");
+        String iconLinkDay2 = ("http://openweathermap.org/img/wn/" + iconDay2 + "@2x.png");
+        Image imageD2C1 = new Image(iconLinkDay2);
+        obrazDay2City2.setImage(imageD2C1);
+        tempDay2City2.setText(forecast.get("day2temp") + stopnie + " C");
+        descriptionDay2City2.setText((String) forecast.get("day2desc"));
+
+        String iconDay3 = (String) forecast.get("day3icon");
+        String iconLinkDay3 = ("http://openweathermap.org/img/wn/" + iconDay3 + "@2x.png");
+        Image imageD3C1 = new Image(iconLinkDay3);
+        obrazDay3City2.setImage(imageD3C1);
+        tempDay3City2.setText(forecast.get("day3temp") + stopnie + " C");
+        descriptionDay3City2.setText((String) forecast.get("day3desc"));
+
+        String iconDay4 = (String) forecast.get("day4icon");
+        String iconLinkDay4 = ("http://openweathermap.org/img/wn/" + iconDay4 + "@2x.png");
+        Image imageD4C1 = new Image(iconLinkDay4);
+        obrazDay4City2.setImage(imageD4C1);
+        tempDay4City2.setText(forecast.get("day4temp") + stopnie + " C");
+        descriptionDay4City2.setText((String) forecast.get("day4desc"));
+
+        String iconDay5 = (String) forecast.get("day5icon");
+        String iconLinkDay5 = ("http://openweathermap.org/img/wn/" + iconDay5 + "@2x.png");
+        Image imageD5C1 = new Image(iconLinkDay5);
+        obrazDay5City2.setImage(imageD5C1);
+        tempDay5City2.setText(forecast.get("day5temp") + stopnie + " C");
+        descriptionDay5City2.setText((String) forecast.get("day5desc"));
+
+    }
+
+    public String getWeekday(){
+        String weekday = new SimpleDateFormat("EEE, MMM d").format(new java.util.Date());
+        System.out.println(weekday);
+        return weekday;
     }
 
 }

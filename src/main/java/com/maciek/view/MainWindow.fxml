@@ -29,20 +29,20 @@
                               <Font name="System Bold" size="18.0" />
                            </font></Label>
                         <ImageView fx:id="obraz" fitHeight="120.5" fitWidth="120.5" pickOnBounds="true" preserveRatio="true" />
-                        <Label fx:id="aktualizacjaCity1" prefHeight="32.5" prefWidth="120.5" text="aktualizacja 16:43" wrapText="true" />
+                        <Label fx:id="aktualizacjaCity1" prefHeight="32.5" prefWidth="120.5" text="" wrapText="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="195.0" prefWidth="210.5">
                      <children>
-                        <Label fx:id="nameCity1" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="210.5" text="Nazwamiasta">
+                        <Label fx:id="nameCity1" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="210.5" text="">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font></Label>
-                        <Label fx:id="tempTodayCity1" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.5" prefWidth="210.5" text="21 C">
+                        <Label fx:id="tempTodayCity1" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.5" prefWidth="210.5" text="">
                            <font>
                               <Font name="System Bold" size="48.0" />
                            </font></Label>
-                        <Label fx:id="descriptionTodayCity1" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="32.5" prefWidth="210.5" text="pochmurno z przejasnieniami">
+                        <Label fx:id="descriptionTodayCity1" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="32.5" prefWidth="210.5" text="">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font></Label>
@@ -50,23 +50,23 @@
                   </VBox>
                   <VBox prefHeight="195.0" prefWidth="271.5">
                      <children>
-                        <Label fx:id="odczuwalnaToday1" layoutX="10.0" layoutY="10.0" prefHeight="39" prefWidth="271.5" text="odczuwalna: 19">
+                        <Label fx:id="odczuwalnaToday1" layoutX="10.0" layoutY="10.0" prefHeight="39" prefWidth="271.5" text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
-                        <Label fx:id="minToday1" layoutX="10.0" layoutY="43.0" prefHeight="39" prefWidth="271.5" text="minimalna: 13">
+                        <Label fx:id="minToday1" layoutX="10.0" layoutY="43.0" prefHeight="39" prefWidth="271.5" text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
-                        <Label fx:id="maxToday1" layoutX="10.0" layoutY="76.0" prefHeight="39" prefWidth="271.5" text="maksymalna: 24">
+                        <Label fx:id="maxToday1" layoutX="10.0" layoutY="76.0" prefHeight="39" prefWidth="271.5" text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
-                        <Label fx:id="humidToday1" layoutX="10.0" layoutY="109.0" prefHeight="39" prefWidth="271.5" text="wilgotność: 50%">
+                        <Label fx:id="humidToday1" layoutX="10.0" layoutY="109.0" prefHeight="39" prefWidth="271.5" text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
-                        <Label fx:id="pressureToday1" layoutX="10.0" layoutY="142.0" prefHeight="39" prefWidth="271.5" text="ciśnienie: 3 mm">
+                        <Label fx:id="pressureToday1" layoutX="10.0" layoutY="142.0" prefHeight="39" prefWidth="271.5" text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
@@ -95,17 +95,17 @@
                   <VBox prefHeight="195.0" prefWidth="210.5">
                      <children>
                         <Label fx:id="nameCity2" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0"
-                               prefWidth="210.5" text="Nazwamiasta">
+                               prefWidth="210.5" text="">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font></Label>
                         <Label fx:id="tempTodayCity2" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0"
-                               layoutY="10.0" prefHeight="120.5" prefWidth="210.5" text="21 C">
+                               layoutY="10.0" prefHeight="120.5" prefWidth="210.5" text="">
                            <font>
                               <Font name="System Bold" size="48.0" />
                            </font></Label>
                         <Label fx:id="descriptionTodayCity2" alignment="CENTER" layoutX="10.0" layoutY="10.0"
-                               prefHeight="32.5" prefWidth="210.5" text="pochmurno z przejasnieniami">
+                               prefHeight="32.5" prefWidth="210.5" text="">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font></Label>
@@ -114,27 +114,27 @@
                   <VBox prefHeight="195.0" prefWidth="271.5">
                      <children>
                         <Label fx:id="odczuwalnaToday2" layoutX="10.0" layoutY="10.0" prefHeight="39"
-                               prefWidth="271.5" text="odczuwalna: 19">
+                               prefWidth="271.5" text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
                         <Label fx:id="minToday2" layoutX="10.0" layoutY="43.0" prefHeight="39" prefWidth="271.5"
-                               text="minimalna: 13">
+                               text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
                         <Label fx:id="maxToday2" layoutX="10.0" layoutY="76.0" prefHeight="39" prefWidth="271.5"
-                               text="maksymalna: 24">
+                               text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
                         <Label fx:id="humidToday2" layoutX="10.0" layoutY="109.0" prefHeight="39" prefWidth="271.5"
-                               text="wilgotność: 50%">
+                               text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
                         <Label fx:id="pressureToday2" layoutX="10.0" layoutY="142.0" prefHeight="39"
-                               prefWidth="271.5" text="ciśnienie: 3 mm">
+                               prefWidth="271.5" text="">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
@@ -150,12 +150,12 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay1City1" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay1City1" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="descriptionDay1City1" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="pochmurno z przejasnieniami">
+                        <Label fx:id="descriptionDay1City1" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -163,7 +163,7 @@
                      </children>
                   </VBox>
                   <ImageView fx:id="obrazDay1City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label fx:id="tempDay1City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay1City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -177,13 +177,13 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay2City1" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay2City1" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="descriptionDay2City1" layoutX="10.0" layoutY="10.0" prefHeight="46.0"
-                               prefWidth="209.0" text="pochmurno z przejasnieniami">
+                               prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -192,7 +192,7 @@
                   </VBox>
                   <ImageView fx:id="obrazDay2City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true"
                              preserveRatio="true" />
-                  <Label fx:id="tempDay2City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay2City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -206,13 +206,13 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay3City1" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay3City1" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="descriptionDay3City1" layoutX="10.0" layoutY="10.0" prefHeight="46.0"
-                               prefWidth="209.0" text="pochmurno z przejasnieniami">
+                               prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -221,7 +221,7 @@
                   </VBox>
                   <ImageView fx:id="obrazDay3City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true"
                              preserveRatio="true" />
-                  <Label fx:id="tempDay3City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay3City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -235,13 +235,13 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay4City1" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay4City1" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="descriptionDay4City1" layoutX="10.0" layoutY="10.0" prefHeight="46.0"
-                               prefWidth="209.0" text="pochmurno z przejasnieniami">
+                               prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -250,7 +250,7 @@
                   </VBox>
                   <ImageView fx:id="obrazDay4City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true"
                              preserveRatio="true" />
-                  <Label fx:id="tempDay4City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay4City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -264,13 +264,13 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay5City1" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay5City1" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="descriptionDay5City1" layoutX="10.0" layoutY="10.0" prefHeight="46.0"
-                               prefWidth="209.0" text="pochmurno z przejasnieniami">
+                               prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -279,7 +279,7 @@
                   </VBox>
                   <ImageView fx:id="obrazDay5City1" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true"
                              preserveRatio="true" />
-                  <Label fx:id="tempDay5City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay5City1" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -294,13 +294,13 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay1City2" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay1City2" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="descriptionDay1City2" layoutX="10.0" layoutY="10.0" prefHeight="46.0"
-                               prefWidth="209.0" text="pochmurno z przejasnieniami">
+                               prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -309,7 +309,7 @@
                   </VBox>
                   <ImageView fx:id="obrazDay1City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true"
                              preserveRatio="true" />
-                  <Label fx:id="tempDay1City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay1City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -323,13 +323,13 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay2City2" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay2City2" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="descriptionDay2City2" layoutX="10.0" layoutY="10.0" prefHeight="46.0"
-                               prefWidth="209.0" text="pochmurno z przejasnieniami">
+                               prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -338,7 +338,7 @@
                   </VBox>
                   <ImageView fx:id="obrazDay2City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true"
                              preserveRatio="true" />
-                  <Label fx:id="tempDay2City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay2City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -352,13 +352,13 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay3City2" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay3City2" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="descriptionDay3City2" layoutX="10.0" layoutY="10.0" prefHeight="46.0"
-                               prefWidth="209.0" text="pochmurno z przejasnieniami">
+                               prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -367,7 +367,7 @@
                   </VBox>
                   <ImageView fx:id="obrazDay3City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true"
                              preserveRatio="true" />
-                  <Label fx:id="tempDay3City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay3City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -381,13 +381,13 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay4City2" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay4City2" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="descriptionDay4City2" layoutX="10.0" layoutY="10.0" prefHeight="46.0"
-                               prefWidth="209.0" text="pochmurno z przejasnieniami">
+                               prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -396,7 +396,7 @@
                   </VBox>
                   <ImageView fx:id="obrazDay4City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true"
                              preserveRatio="true" />
-                  <Label fx:id="tempDay4City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay4City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -410,13 +410,13 @@
                <children>
                   <VBox prefHeight="90.0" prefWidth="187.0">
                      <children>
-                        <Label fx:id="dateDay5City2" prefHeight="45.0" prefWidth="225.0" text="Pn, 18 Maj">
+                        <Label fx:id="dateDay5City2" prefHeight="45.0" prefWidth="225.0" text="">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="descriptionDay5City2" layoutX="10.0" layoutY="10.0" prefHeight="46.0"
-                               prefWidth="209.0" text="pochmurno z przejasnieniami">
+                               prefWidth="209.0" text="">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -425,7 +425,7 @@
                   </VBox>
                   <ImageView fx:id="obrazDay5City2" fitHeight="69.0" fitWidth="200.0" pickOnBounds="true"
                              preserveRatio="true" />
-                  <Label fx:id="tempDay5City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="17 C">
+                  <Label fx:id="tempDay5City2" alignment="CENTER" prefHeight="150.0" prefWidth="217.0" text="">
                      <font>
                         <Font size="24.0" />
                      </font>

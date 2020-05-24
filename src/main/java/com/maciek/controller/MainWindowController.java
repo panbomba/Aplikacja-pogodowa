@@ -11,12 +11,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -207,18 +207,30 @@ public class MainWindowController extends BaseController implements Initializabl
 
     @FXML
     void button1Action() throws IOException {
-        String wpisanyTekst1 = wyborMiasta1.getText();
-        setSceneDataCity1(wpisanyTekst1);
-        weatherDataManager.getUnixTimeForTomorrow();
-        weatherDataManager.getForecastMap(wpisanyTekst1);
-        getWeekday();
+        try {
+            String wpisanyTekst1 = wyborMiasta1.getText();
+            errorLabel1.setText("");
+            setSceneDataCity1(wpisanyTekst1);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            errorLabel1.setText("Nie znaleziono wybranego miejsca.");
+        } catch (UnknownHostException e) {
+            errorLabel1.setText("Nie udało się połączyć z siecią");
+        }
     }
 
     @FXML
     void button2Action() throws IOException {
-        String wpisanyTekst2 = wyborMiasta2.getText();
-        setSceneDataCity2(wpisanyTekst2);
-        //weatherDataManager.Forecats(wpisanyTekst2);
+        try {
+            String wpisanyTekst2 = wyborMiasta2.getText();
+            errorLabel2.setText("");
+            setSceneDataCity2(wpisanyTekst2);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            errorLabel2.setText("Nie znaleziono wybranego miejsca.");
+        } catch (UnknownHostException e) {
+            errorLabel2.setText("Nie udało się połączyć z siecią");
+        }
     }
 
     // INITIALIZE??? - PO CO?
@@ -231,8 +243,8 @@ public class MainWindowController extends BaseController implements Initializabl
 
     public void setSceneDataCity1(String wpisanyTekst1) throws IOException {
         String miasto1 = wpisanyTekst1.replace(" " , "+");
-        //String forecast = weatherDataManager.getJsonStringForecast(miasto1);
         HashMap weatherNow = weatherDataManager.getWeatherToday(miasto1);
+        HashMap forecast = weatherDataManager.getForecastMap(miasto1);
         aktualizacjaCity1.setText("aktualizacja: " + weatherDataManager.getTimeStamp());
         tempTodayCity1.setText(String.valueOf(weatherNow.get("temperature")) + stopnie + " C");
         odczuwalnaToday1.setText("odczuwalna: " + (String) weatherNow.get("feelslike") + stopnie + " C");
@@ -269,9 +281,7 @@ public class MainWindowController extends BaseController implements Initializabl
         dateDay2City1.setText(data2);
         dateDay3City1.setText(data3);
         dateDay4City1.setText(data4);
-        dateDay5City1.setText(data5);
-
-        HashMap forecast = weatherDataManager.getForecastMap(miasto1);
+        dateDay5City1.setText(data4 + " / " + data5 + " noc");
 
         String iconDay1 = (String) forecast.get("day1icon");
         String iconLinkDay1 = ("http://openweathermap.org/img/wn/" + iconDay1 + "@2x.png");
@@ -349,8 +359,7 @@ public class MainWindowController extends BaseController implements Initializabl
         dateDay2City2.setText(data2);
         dateDay3City2.setText(data3);
         dateDay4City2.setText(data4);
-        dateDay5City2.setText(data5);
-
+        dateDay5City2.setText(data4 + " / " + data5 + " noc");
 
         HashMap forecast = weatherDataManager.getForecastMap(miasto2);
 

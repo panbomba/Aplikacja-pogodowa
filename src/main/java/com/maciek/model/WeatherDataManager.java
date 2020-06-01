@@ -2,6 +2,7 @@ package com.maciek.model;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,6 +11,7 @@ import java.net.URLConnection;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.TimeZone;
 
 import static java.lang.String.*;
@@ -52,14 +54,14 @@ public class WeatherDataManager {
         return forecastString;
     }
 
-    public String getTimeStamp(){
+    public String getTimeStamp() {
         String timeStamp = new SimpleDateFormat("HH:mm").format(new java.util.Date());
         return timeStamp;
     }
 
-    public HashMap getWeatherToday(String city) throws IOException {
+    public Map<String, String> getWeatherToday(String city) throws IOException {
 
-        HashMap<String, String> weatherConditions = new HashMap<String, String>();
+        Map<String, String> weatherConditions = new HashMap<>();
         String jsonString = getJsonStringWeather(city);
         JSONObject obiect = new JSONObject(jsonString);
         JSONArray lineItems = obiect.getJSONArray("weather");
@@ -102,15 +104,15 @@ public class WeatherDataManager {
         return unixTimeStamp;
     }
 
-    public HashMap getForecastMap (String city) throws IOException, StringIndexOutOfBoundsException {
-        HashMap<String, String> weatherForecastMap = new HashMap();
-        long uniXTimeAtNoon = Long.valueOf(getUnixTimeForTomorrow());
-        long unixTimeAtNoonDay2 = Long.valueOf(uniXTimeAtNoon + 86400);
-        long unixTimeAtNoonDay3 = Long.valueOf(unixTimeAtNoonDay2 + 86400);
-        long unixTimeAtNoonDay4 = Long.valueOf(unixTimeAtNoonDay3 + 86400);
+    public Map<String, String> getForecastMap(String city) throws IOException, StringIndexOutOfBoundsException {
+        Map<String, String> weatherForecastMap = new HashMap<>();
+        long uniXTimeAtNoon = getUnixTimeForTomorrow();
+        long unixTimeAtNoonDay2 = uniXTimeAtNoon + 86400;
+        long unixTimeAtNoonDay3 = unixTimeAtNoonDay2 + 86400;
+        long unixTimeAtNoonDay4 = unixTimeAtNoonDay3 + 86400;
 
 
-        long unixTimeAtNoonDay5 = Long.valueOf(unixTimeAtNoonDay4 + 43200); //pointing midnight in case day5 data is
+        long unixTimeAtNoonDay5 = unixTimeAtNoonDay4 + 43200; //pointing midnight in case day5 data is
         // not yet available
 
         String timeDay1 = String.valueOf((uniXTimeAtNoon));
@@ -124,7 +126,6 @@ public class WeatherDataManager {
         String timeDay4 = String.valueOf(unixTimeAtNoonDay4);
         String timeDay4End = String.valueOf(unixTimeAtNoonDay4 + 10800);
         String timeDay5 = String.valueOf(unixTimeAtNoonDay5);
-        String timeDay5End = String.valueOf(unixTimeAtNoonDay5 + 10800);
 
         String jsonString = getJsonStringForecast(city);
         try {
@@ -144,7 +145,7 @@ public class WeatherDataManager {
                 int timeDay4Index = jsonString.indexOf(timeDay4);
                 int timeDay4EndIndex = jsonString.indexOf(timeDay4End);
                 int timeDay5Index = jsonString.indexOf(timeDay5);
-                int timeDay5EndIndex = jsonString.indexOf(timeDay5)+300; //three hour weather data is a string of
+                int timeDay5EndIndex = jsonString.indexOf(timeDay5) + 300; //three hour weather data is a string of
                 // around 300 characters - in case request is done before 3 AM this is the last entry
 
                 String day1Forecast = (String) jsonString.subSequence(timeDay1Index, timeDay1EndIndex);
@@ -174,9 +175,7 @@ public class WeatherDataManager {
                 weatherForecastMap.put("day5icon", getIcon(day5Forecast));
             }
         } catch(StringIndexOutOfBoundsException e) {
-            boolean exceptionRaised = false;
-            System.out.println(e);
-            exceptionRaised = true;
+            e.printStackTrace();
         }
 
         return  weatherForecastMap;
@@ -185,26 +184,20 @@ public class WeatherDataManager {
     public String getTemp(String weatherDescription) {
 
         int tempIndex = weatherDescription.indexOf("temp");
-        String temp = weatherDescription.substring(tempIndex+6, tempIndex+8).replace(".", "");
-
-        return temp;
+        return weatherDescription.substring(tempIndex+6, tempIndex+8).replace(".", "");
     }
 
     public String getDescription(String weatherDescription) {
 
         int iconIndex = weatherDescription.indexOf("icon");
         int descriptionIndex = weatherDescription.indexOf("description");
-        String description = weatherDescription.substring(descriptionIndex + 14, iconIndex - 3);
-
-        return description;
+        return weatherDescription.substring(descriptionIndex + 14, iconIndex - 3);
     }
 
     public String getIcon(String weatherDescription) {
 
         int iconIndex = weatherDescription.indexOf("icon");
-        String icon = weatherDescription.substring(iconIndex + 7, iconIndex + 10);
-
-        return icon;
+        return weatherDescription.substring(iconIndex + 7, iconIndex + 10);
     }
 
     public String translateWeekday(String weekday) {

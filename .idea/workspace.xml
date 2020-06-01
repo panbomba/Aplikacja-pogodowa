@@ -7,20 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa573891-03e9-4bc1-8932-01abed1dd5ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maciek/com/maciek/Launcher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maciek/com/maciek/controller/BaseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maciek/com/maciek/controller/MainWindowController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maciek/com/maciek/model/WeatherDataManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maciek/com/maciek/view/ViewFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/maciek/module-info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/Launcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/MainWindowController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/view/ViewFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/MainWindowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/MainWindowController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,30 +144,30 @@
     </state>
     <state x="2586" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590236049344" />
     <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590135992700" />
-    <state width="1877" height="174" key="GridCell.Tab.0.bottom" timestamp="1591036362127">
+    <state width="1877" height="174" key="GridCell.Tab.0.bottom" timestamp="1591038360158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590143453948" />
     <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590255161164" />
-    <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591036362127" />
-    <state width="1877" height="174" key="GridCell.Tab.0.center" timestamp="1591036362127">
+    <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591038360158" />
+    <state width="1877" height="174" key="GridCell.Tab.0.center" timestamp="1591038360158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590143453948" />
     <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590255161164" />
-    <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591036362127" />
-    <state width="1877" height="174" key="GridCell.Tab.0.left" timestamp="1591036362127">
+    <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591038360158" />
+    <state width="1877" height="174" key="GridCell.Tab.0.left" timestamp="1591038360158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590143453948" />
     <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590255161164" />
-    <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591036362126" />
-    <state width="1877" height="174" key="GridCell.Tab.0.right" timestamp="1591036362127">
+    <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591038360158" />
+    <state width="1877" height="174" key="GridCell.Tab.0.right" timestamp="1591038360158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590143453948" />
     <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590255161164" />
-    <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591036362127" />
+    <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591038360158" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1590329826888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

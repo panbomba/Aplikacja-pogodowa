@@ -1,1 +1,1 @@
-java --module-path C:\Users\matrix\Desktop\Java FX lib\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2 --add modules javafx.controls,javafx.fxml,javafx.web,javafx.graphics -jar AplikacjaPogodowa.jar
+java --class-path C:\Users\matrix\IdeaProjects\Aplikacja Pogodowa 1\src\main\java --module-path C:\Users\matrix\Desktop\Java FX lib\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2 --add modules javafx.controls,javafx.fxml,javafx.web,javafx.graphics,org.json,com.google.gson; -jar AplikacjaPogodowa.jar

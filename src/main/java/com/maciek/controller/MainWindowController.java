@@ -29,23 +29,23 @@ public class MainWindowController extends BaseController implements Initializabl
         label.setText(data);
     }
 
-    public String stopnie = "\u00B0";
+    public String degrees = "\u00B0";
 
     @FXML
     private AnchorPane anchor;
     @FXML
-    private TextField wyborMiasta1;
+    private TextField citySelection1;
     @FXML
-    private TextField wyborMiasta2;
+    private TextField citySelection2;
 
     @FXML
     private StackPane todayCity1;
     @FXML
     private Label todayDateCity1;
     @FXML
-    private ImageView obraz;
+    private ImageView mainImageCity1;
     @FXML
-    private Label aktualizacjaCity1;
+    private Label actualizationCity1;
     @FXML
     private Label nameCity1;
     @FXML
@@ -53,13 +53,13 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionTodayCity1;
     @FXML
-    private Label odczuwalnaToday1;
+    private Label feelslikeTodayCity1;
     @FXML
     private Label minToday1;
     @FXML
     private Label maxToday1;
     @FXML
-    private Label humidToday1;
+    private Label humidityToday1;
     @FXML
     private Label pressureToday1;
 
@@ -68,9 +68,9 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label todayDateCity2;
     @FXML
-    private ImageView obraz2;
+    private ImageView mainImageCity2;
     @FXML
-    private Label aktualizacjaCity2;
+    private Label actualizationCity2;
     @FXML
     private Label nameCity2;
     @FXML
@@ -78,13 +78,13 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionTodayCity2;
     @FXML
-    private Label odczuwalnaToday2;
+    private Label feelslikeTodayCity2;
     @FXML
     private Label minToday2;
     @FXML
     private Label maxToday2;
     @FXML
-    private Label humidToday2;
+    private Label humidityToday2;
     @FXML
     private Label pressureToday2;
 
@@ -95,7 +95,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay1City1;
     @FXML
-    private ImageView obrazDay1City1;
+    private ImageView imageDay1City1;
     @FXML
     private Label tempDay1City1;
 
@@ -106,7 +106,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay2City1;
     @FXML
-    private ImageView obrazDay2City1;
+    private ImageView imageDay2City1;
     @FXML
     private Label tempDay2City1;
 
@@ -117,7 +117,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay3City1;
     @FXML
-    private ImageView obrazDay3City1;
+    private ImageView imageDay3City1;
     @FXML
     private Label tempDay3City1;
 
@@ -128,7 +128,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay4City1;
     @FXML
-    private ImageView obrazDay4City1;
+    private ImageView imageDay4City1;
     @FXML
     private Label tempDay4City1;
 
@@ -139,7 +139,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay5City1;
     @FXML
-    private ImageView obrazDay5City1;
+    private ImageView imageDay5City1;
     @FXML
     private Label tempDay5City1;
 
@@ -150,7 +150,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay1City2;
     @FXML
-    private ImageView obrazDay1City2;
+    private ImageView imageDay1City2;
     @FXML
     private Label tempDay1City2;
 
@@ -161,7 +161,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay2City2;
     @FXML
-    private ImageView obrazDay2City2;
+    private ImageView imageDay2City2;
     @FXML
     private Label tempDay2City2;
 
@@ -172,7 +172,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay3City2;
     @FXML
-    private ImageView obrazDay3City2;
+    private ImageView imageDay3City2;
     @FXML
     private Label tempDay3City2;
 
@@ -183,7 +183,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay4City2;
     @FXML
-    private ImageView obrazDay4City2;
+    private ImageView imageDay4City2;
     @FXML
     private Label tempDay4City2;
 
@@ -194,12 +194,12 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     private Label descriptionDay5City2;
     @FXML
-    private ImageView obrazDay5City2;
+    private ImageView imageDay5City2;
     @FXML
     private Label tempDay5City2;
 
     @FXML
-    private Label etykietaCopyrights;
+    private Label copyrightsLabel;
     @FXML
     private Label errorLabel1;
     @FXML
@@ -208,9 +208,10 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     void button1Action() throws IOException {
         try {
-            String wpisanyTekst1 = wyborMiasta1.getText();
+            String inputCity1 = citySelection1.getText();
+            System.out.println(inputCity1);
             errorLabel1.setText("");
-            setSceneDataCity1(wpisanyTekst1);
+            setSceneDataCity1(inputCity1);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             errorLabel1.setText("Nie znaleziono wybranego miejsca.");
@@ -222,9 +223,9 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     void button2Action() throws IOException {
         try {
-            String wpisanyTekst2 = wyborMiasta2.getText();
+            String inputCity2 = citySelection2.getText();
             errorLabel2.setText("");
-            setSceneDataCity2(wpisanyTekst2);
+            setSceneDataCity2(inputCity2);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             errorLabel2.setText("Nie znaleziono wybranego miejsca.");
@@ -241,16 +242,16 @@ public class MainWindowController extends BaseController implements Initializabl
         todayCity1.getChildren().add(labelInsideCity1);
     }
 
-    public void setSceneDataCity1(String wpisanyTekst1) throws IOException {
-        String miasto1 = wpisanyTekst1.replace(" " , "+");
-        HashMap weatherNow = weatherDataManager.getWeatherToday(miasto1);
-        HashMap forecast = weatherDataManager.getForecastMap(miasto1);
-        aktualizacjaCity1.setText("aktualizacja: " + weatherDataManager.getTimeStamp());
-        tempTodayCity1.setText(String.valueOf(weatherNow.get("temperature")) + stopnie + " C");
-        odczuwalnaToday1.setText("odczuwalna: " + (String) weatherNow.get("feelslike") + stopnie + " C");
-        minToday1.setText("minimalna: " + (String) weatherNow.get("min") + stopnie + " C");
-        maxToday1.setText("maksymalna: " + (String) weatherNow.get("max") + stopnie + " C");
-        humidToday1.setText("wilgotność: " + (String) weatherNow.get("humidity") +
+    public void setSceneDataCity1(String city1) throws IOException {
+        String city1NoSpaces = city1.replace(" " , "+");
+        HashMap weatherNow = weatherDataManager.getWeatherToday(city1NoSpaces);
+        HashMap forecast = weatherDataManager.getForecastMap(city1NoSpaces);
+        actualizationCity1.setText("aktualizacja: " + weatherDataManager.getTimeStamp());
+        tempTodayCity1.setText(String.valueOf(weatherNow.get("temperature")) + degrees + " C");
+        feelslikeTodayCity1.setText("odczuwalna: " + (String) weatherNow.get("feelslike") + degrees + " C");
+        minToday1.setText("minimalna: " + (String) weatherNow.get("min") + degrees + " C");
+        maxToday1.setText("maksymalna: " + (String) weatherNow.get("max") + degrees + " C");
+        humidityToday1.setText("wilgotność: " + (String) weatherNow.get("humidity") +
                 " %");
         pressureToday1.setText("ciśnienie: " + (String) weatherNow.get("pressure") +
                 " hPa");
@@ -258,9 +259,9 @@ public class MainWindowController extends BaseController implements Initializabl
 
         String icon = ((String) weatherNow.get("icon"));
         String iconLink = ("http://openweathermap.org/img/wn/" + icon + "@2x.png");
-        Image obrazStronka = new Image(iconLink);
-        obraz.setImage(obrazStronka);
-        nameCity1.setText(wpisanyTekst1.toUpperCase());
+        Image websiteImage = new Image(iconLink);
+        mainImageCity1.setImage(websiteImage);
+        nameCity1.setText(city1.toUpperCase());
         todayDateCity1.setText(getWeekday());
 
         todayCity1.setVisible(true);
@@ -286,49 +287,49 @@ public class MainWindowController extends BaseController implements Initializabl
         String iconDay1 = (String) forecast.get("day1icon");
         String iconLinkDay1 = ("http://openweathermap.org/img/wn/" + iconDay1 + "@2x.png");
         Image imageD1C1 = new Image(iconLinkDay1);
-        obrazDay1City1.setImage(imageD1C1);
-        tempDay1City1.setText(forecast.get("day1temp") + stopnie + " C");
+        imageDay1City1.setImage(imageD1C1);
+        tempDay1City1.setText(forecast.get("day1temp") + degrees + " C");
         descriptionDay1City1.setText((String) forecast.get("day1desc"));
 
         String iconDay2 = (String) forecast.get("day2icon");
         String iconLinkDay2 = ("http://openweathermap.org/img/wn/" + iconDay2 + "@2x.png");
         Image imageD2C1 = new Image(iconLinkDay2);
-        obrazDay2City1.setImage(imageD2C1);
-        tempDay2City1.setText(forecast.get("day2temp") + stopnie + " C");
+        imageDay2City1.setImage(imageD2C1);
+        tempDay2City1.setText(forecast.get("day2temp") + degrees + " C");
         descriptionDay2City1.setText((String) forecast.get("day2desc"));
 
         String iconDay3 = (String) forecast.get("day3icon");
         String iconLinkDay3 = ("http://openweathermap.org/img/wn/" + iconDay3 + "@2x.png");
         Image imageD3C1 = new Image(iconLinkDay3);
-        obrazDay3City1.setImage(imageD3C1);
-        tempDay3City1.setText(forecast.get("day3temp") + stopnie + " C");
+        imageDay3City1.setImage(imageD3C1);
+        tempDay3City1.setText(forecast.get("day3temp") + degrees + " C");
         descriptionDay3City1.setText((String) forecast.get("day3desc"));
 
         String iconDay4 = (String) forecast.get("day4icon");
         String iconLinkDay4 = ("http://openweathermap.org/img/wn/" + iconDay4 + "@2x.png");
         Image imageD4C1 = new Image(iconLinkDay4);
-        obrazDay4City1.setImage(imageD4C1);
-        tempDay4City1.setText(forecast.get("day4temp") + stopnie + " C");
+        imageDay4City1.setImage(imageD4C1);
+        tempDay4City1.setText(forecast.get("day4temp") + degrees + " C");
         descriptionDay4City1.setText((String) forecast.get("day4desc"));
 
         String iconDay5 = (String) forecast.get("day5icon");
         String iconLinkDay5 = ("http://openweathermap.org/img/wn/" + iconDay5 + "@2x.png");
         Image imageD5C1 = new Image(iconLinkDay5);
-        obrazDay5City1.setImage(imageD5C1);
-        tempDay5City1.setText(forecast.get("day5temp") + stopnie + " C");
+        imageDay5City1.setImage(imageD5C1);
+        tempDay5City1.setText(forecast.get("day5temp") + degrees + " C");
         descriptionDay5City1.setText((String) forecast.get("day5desc"));
 
     }
 
-    public void setSceneDataCity2(String wpisanyTekst2) throws IOException {
-        String miasto2 = wpisanyTekst2.replace(" " , "+");
-        HashMap weatherNow = weatherDataManager.getWeatherToday(miasto2);
-        aktualizacjaCity2.setText("aktualizacja: " + weatherDataManager.getTimeStamp());
-        tempTodayCity2.setText(String.valueOf(weatherNow.get("temperature")) + stopnie + " C");
-        odczuwalnaToday2.setText("odczuwalna: " + (String) weatherNow.get("feelslike") + stopnie + " C");
-        minToday2.setText("minimalna: " + (String) weatherNow.get("min") + stopnie + " C");
-        maxToday2.setText("maksymalna: " + (String) weatherNow.get("max") + stopnie + " C");
-        humidToday2.setText("wilgotność: " + (String) weatherNow.get("humidity") +
+    public void setSceneDataCity2(String city2) throws IOException {
+        String city2NoSpaces = city2.replace(" " , "+");
+        HashMap weatherNow = weatherDataManager.getWeatherToday(city2NoSpaces);
+        actualizationCity2.setText("aktualizacja: " + weatherDataManager.getTimeStamp());
+        tempTodayCity2.setText(String.valueOf(weatherNow.get("temperature")) + degrees + " C");
+        feelslikeTodayCity2.setText("odczuwalna: " + (String) weatherNow.get("feelslike") + degrees + " C");
+        minToday2.setText("minimalna: " + (String) weatherNow.get("min") + degrees + " C");
+        maxToday2.setText("maksymalna: " + (String) weatherNow.get("max") + degrees + " C");
+        humidityToday2.setText("wilgotność: " + (String) weatherNow.get("humidity") +
                 " %");
         pressureToday2.setText("ciśnienie: " + (String) weatherNow.get("pressure") +
                 " hPa");
@@ -336,9 +337,9 @@ public class MainWindowController extends BaseController implements Initializabl
 
         String icon = ((String) weatherNow.get("icon"));
         String iconLink = ("http://openweathermap.org/img/wn/" + icon + "@2x.png");
-        Image obrazStronka = new Image(iconLink);
-        obraz2.setImage(obrazStronka);
-        nameCity2.setText(wpisanyTekst2.toUpperCase());
+        Image websiteImage2 = new Image(iconLink);
+        mainImageCity2.setImage(websiteImage2);
+        nameCity2.setText(city2.toUpperCase());
         todayDateCity2.setText(getWeekday());
 
         todayCity2.setVisible(true);
@@ -361,41 +362,41 @@ public class MainWindowController extends BaseController implements Initializabl
         dateDay4City2.setText(data4);
         dateDay5City2.setText(data4 + " / " + data5 + " noc");
 
-        HashMap forecast = weatherDataManager.getForecastMap(miasto2);
+        HashMap forecast = weatherDataManager.getForecastMap(city2NoSpaces);
 
         String iconDay1 = (String) forecast.get("day1icon");
         String iconLinkDay1 = ("http://openweathermap.org/img/wn/" + iconDay1 + "@2x.png");
         Image imageD1C1 = new Image(iconLinkDay1);
-        obrazDay1City2.setImage(imageD1C1);
-        tempDay1City2.setText(forecast.get("day1temp") + stopnie + " C");
+        imageDay1City2.setImage(imageD1C1);
+        tempDay1City2.setText(forecast.get("day1temp") + degrees + " C");
         descriptionDay1City2.setText((String) forecast.get("day1desc"));
 
         String iconDay2 = (String) forecast.get("day2icon");
         String iconLinkDay2 = ("http://openweathermap.org/img/wn/" + iconDay2 + "@2x.png");
         Image imageD2C1 = new Image(iconLinkDay2);
-        obrazDay2City2.setImage(imageD2C1);
-        tempDay2City2.setText(forecast.get("day2temp") + stopnie + " C");
+        imageDay2City2.setImage(imageD2C1);
+        tempDay2City2.setText(forecast.get("day2temp") + degrees + " C");
         descriptionDay2City2.setText((String) forecast.get("day2desc"));
 
         String iconDay3 = (String) forecast.get("day3icon");
         String iconLinkDay3 = ("http://openweathermap.org/img/wn/" + iconDay3 + "@2x.png");
         Image imageD3C1 = new Image(iconLinkDay3);
-        obrazDay3City2.setImage(imageD3C1);
-        tempDay3City2.setText(forecast.get("day3temp") + stopnie + " C");
+        imageDay3City2.setImage(imageD3C1);
+        tempDay3City2.setText(forecast.get("day3temp") + degrees + " C");
         descriptionDay3City2.setText((String) forecast.get("day3desc"));
 
         String iconDay4 = (String) forecast.get("day4icon");
         String iconLinkDay4 = ("http://openweathermap.org/img/wn/" + iconDay4 + "@2x.png");
         Image imageD4C1 = new Image(iconLinkDay4);
-        obrazDay4City2.setImage(imageD4C1);
-        tempDay4City2.setText(forecast.get("day4temp") + stopnie + " C");
+        imageDay4City2.setImage(imageD4C1);
+        tempDay4City2.setText(forecast.get("day4temp") + degrees + " C");
         descriptionDay4City2.setText((String) forecast.get("day4desc"));
 
         String iconDay5 = (String) forecast.get("day5icon");
         String iconLinkDay5 = ("http://openweathermap.org/img/wn/" + iconDay5 + "@2x.png");
         Image imageD5C1 = new Image(iconLinkDay5);
-        obrazDay5City2.setImage(imageD5C1);
-        tempDay5City2.setText(forecast.get("day5temp") + stopnie + " C");
+        imageDay5City2.setImage(imageD5C1);
+        tempDay5City2.setText(forecast.get("day5temp") + degrees + " C");
         descriptionDay5City2.setText((String) forecast.get("day5desc"));
 
     }

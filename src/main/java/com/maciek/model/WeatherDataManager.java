@@ -19,10 +19,10 @@ public class WeatherDataManager {
     private static String apiKey = "fb39b81cd3a7ca7c9c2938c1e8a19e6d"; //CZY TO MA BYC STALA ALBO PRIVATE?
     private Object HashMap;
 
-    public static String getJsonStringWeather(String miasto) throws IOException {
+    public static String getJsonStringWeather(String city) throws IOException {
 
         String adresURLweather =
-                "http://api.openweathermap.org/data/2.5/weather?q=" + miasto + "&lang=pl" + "&units=metric" +
+                "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&lang=pl" + "&units=metric" +
                         "&APPID=" + apiKey;
 
         URL url = new URL(adresURLweather);
@@ -36,10 +36,10 @@ public class WeatherDataManager {
         return weatherString;
     }
 
-    public String getJsonStringForecast(String miasto) throws IOException {
+    public String getJsonStringForecast(String city) throws IOException {
 
         String adresURLforecast =
-                "http://api.openweathermap.org/data/2.5/forecast?q=" + miasto + "&lang=pl" + "&units=metric" +
+                "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&lang=pl" + "&units=metric" +
                         "&APPID=" + apiKey;
         URL url = new URL(adresURLforecast);
         URLConnection urlConnection = url.openConnection();
@@ -57,19 +57,19 @@ public class WeatherDataManager {
         return timeStamp;
     }
 
-    public HashMap getWeatherToday(String miasto) throws IOException {
+    public HashMap getWeatherToday(String city) throws IOException {
 
         HashMap<String, String> weatherConditions = new HashMap<String, String>();
-        String jsonString = getJsonStringWeather(miasto);
-        JSONObject obiekt = new JSONObject(jsonString);
-        JSONArray lineItems = obiekt.getJSONArray("weather");
+        String jsonString = getJsonStringWeather(city);
+        JSONObject obiect = new JSONObject(jsonString);
+        JSONArray lineItems = obiect.getJSONArray("weather");
 
-        String temperature = valueOf(obiekt.getJSONObject("main").getInt("temp"));
-        String feelslike = valueOf(obiekt.getJSONObject("main").getInt("feels_like"));
-        String min = valueOf(obiekt.getJSONObject("main").getInt("temp_min"));
-        String max = valueOf(obiekt.getJSONObject("main").getInt("temp_max"));
-        String pressure = valueOf(obiekt.getJSONObject("main").getInt("pressure"));
-        String humidity = valueOf(obiekt.getJSONObject("main").getInt("humidity"));
+        String temperature = valueOf(obiect.getJSONObject("main").getInt("temp"));
+        String feelslike = valueOf(obiect.getJSONObject("main").getInt("feels_like"));
+        String min = valueOf(obiect.getJSONObject("main").getInt("temp_min"));
+        String max = valueOf(obiect.getJSONObject("main").getInt("temp_max"));
+        String pressure = valueOf(obiect.getJSONObject("main").getInt("pressure"));
+        String humidity = valueOf(obiect.getJSONObject("main").getInt("humidity"));
 
         String icon = null;
         String description = null;
@@ -102,7 +102,7 @@ public class WeatherDataManager {
         return unixTimeStamp;
     }
 
-    public HashMap getForecastMap (String miasto) throws IOException, StringIndexOutOfBoundsException {
+    public HashMap getForecastMap (String city) throws IOException, StringIndexOutOfBoundsException {
         HashMap<String, String> weatherForecastMap = new HashMap();
         long uniXTimeAtNoon = Long.valueOf(getUnixTimeForTomorrow());
         long unixTimeAtNoonDay2 = Long.valueOf(uniXTimeAtNoon + 86400);
@@ -126,7 +126,7 @@ public class WeatherDataManager {
         String timeDay5 = String.valueOf(unixTimeAtNoonDay5);
         String timeDay5End = String.valueOf(unixTimeAtNoonDay5 + 10800);
 
-        String jsonString = getJsonStringForecast(miasto);
+        String jsonString = getJsonStringForecast(city);
         try {
 
             int size;

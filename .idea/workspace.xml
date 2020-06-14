@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa573891-03e9-4bc1-8932-01abed1dd5ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/maciek/model/WeatherDataManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/maciek/model/WeatherDataManagerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maciek/model/WeatherDataManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,18 +60,18 @@
       <recent name="com.maciek.controller" />
       <recent name="com.maciek.model" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.maciek.model" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\matrix\IdeaProjects\Aplikacja Pogodowa 1\src\main\java\com\maciek\view\img" />
       <recent name="C:\Users\matrix\IdeaProjects\Aplikacja Pogodowa 1\src\main\java\com\maciek\view\css" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.maciek.model" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.WeatherDataManagerTest">
+  <component name="RunManager" selected="Application.Launcher">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.maciek.Launcher" />
       <module name="Aplikacja Pogodowa 1" />
@@ -157,8 +150,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WeatherDataManagerTest" />
         <item itemvalue="Application.Launcher" />
+        <item itemvalue="JUnit.WeatherDataManagerTest" />
         <item itemvalue="JUnit.WeatherDataManagerTest.timeStampStringShouldNotBeNull" />
         <item itemvalue="JUnit.WeatherDataManagerTest.unixTimeStampIsNotNull" />
         <item itemvalue="JUnit.WeatherDataManagerTest.weatherMapShouldHaveSizeEight" />
@@ -235,30 +228,30 @@
     </state>
     <state x="2586" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590236049344" />
     <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590135992700" />
-    <state width="1877" height="174" key="GridCell.Tab.0.bottom" timestamp="1592159684659">
+    <state width="1877" height="174" key="GridCell.Tab.0.bottom" timestamp="1592159836908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591611316453" />
     <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590255161164" />
-    <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592159684659" />
-    <state width="1877" height="174" key="GridCell.Tab.0.center" timestamp="1592159684658">
+    <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592159836908" />
+    <state width="1877" height="174" key="GridCell.Tab.0.center" timestamp="1592159836907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591611316453" />
     <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590255161164" />
-    <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592159684658" />
-    <state width="1877" height="174" key="GridCell.Tab.0.left" timestamp="1592159684658">
+    <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592159836907" />
+    <state width="1877" height="174" key="GridCell.Tab.0.left" timestamp="1592159836907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591611316452" />
     <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590255161164" />
-    <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592159684658" />
-    <state width="1877" height="174" key="GridCell.Tab.0.right" timestamp="1592159684658">
+    <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592159836907" />
+    <state width="1877" height="174" key="GridCell.Tab.0.right" timestamp="1592159836908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591611316453" />
     <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590255161164" />
-    <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592159684658" />
+    <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592159836908" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1590329826888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

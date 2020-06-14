@@ -7,7 +7,7 @@ public abstract class BaseController {
 
     protected WeatherDataManager weatherDataManager;
     protected ViewFactory viewFactory;
-    private final String fxmlName;
+    protected final String fxmlName;
 
     public BaseController(WeatherDataManager weatherDataManager, ViewFactory viewFactory, String fxmlName) {
         this.viewFactory = viewFactory;

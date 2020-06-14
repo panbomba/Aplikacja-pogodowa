@@ -21,7 +21,7 @@ public class WeatherDataManager {
     private static String apiKey = "fb39b81cd3a7ca7c9c2938c1e8a19e6d"; //CZY TO MA BYC STALA ALBO PRIVATE?
     private Object HashMap;
 
-    public static String getJsonStringWeather(String city) throws IOException {
+    public String getJsonStringWeather(String city) throws IOException {
 
         String adresURLweather =
                 "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&lang=pl" + "&units=metric" +
